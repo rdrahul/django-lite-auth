@@ -1,0 +1,2 @@
+1.Create a Pipeline to provide user data to other apps.
+2.Keep Everything as much as possible in the Setting file

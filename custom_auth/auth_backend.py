@@ -30,9 +30,10 @@ class AuthenticationManager(object):
             print (" => " ,provider)
             data = provider.send_code(request)
             print (data)
+            '''
             if data != None:
                 create_user(data)
                 print("here")
                 user = authenticate( id =data["user_id"], access_token = data["access_token"] )
                 login(request,user )
-                
+            '''    
