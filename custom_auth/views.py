@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
-from auth_backend import AuthenticationManager
+from .auth_backend import AuthenticationManager
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -17,7 +17,7 @@ def home(request):
 
 def redirect( request ):
     if request.GET.get('error',False):
-        print "Error Occured -- do  error recovery callback "
+        print  (" Error Occured -- do  error recovery callback " )
     
     elif request.GET.get('code', False ):
         AuthenticationManager.code_callback(request)
